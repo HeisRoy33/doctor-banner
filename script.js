@@ -46,6 +46,13 @@ TweenMax.from(".hero", 1, {
   ease: Expo.easeInOut,
 });
 
+TweenMax.from(".aboutus-hero", 1, {
+  delay: 2,
+  opacity: 0,
+  y: -800,
+  ease: Expo.easeInOut,
+});
+
 TweenMax.from(".virus .layer:nth-child(1)", 2, {
   delay: 2,
   opacity: 0,
