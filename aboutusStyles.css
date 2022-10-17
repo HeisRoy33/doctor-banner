@@ -1,0 +1,121 @@
+/* .principle-aboutus-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  z-index: -1;
+} */
+
+.logo a {
+  text-decoration: none;
+  color: #ffc900;
+}
+
+.aboutus-title {
+  flex: 0 0 100%;
+  font-size: 20px;
+  font-weight: 400;
+  color: #f2a506;
+  text-align: justify;
+  padding-bottom: 50px;
+}
+
+.aboutus-tagline {
+  /* flex: 1; */
+  padding-top: 25px;
+  font-size: 30px;
+  color: #999;
+  text-align: center;
+}
+
+.aboutus-more {
+  flex: 1;
+}
+
+.aboutus-more a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background: #000;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #f2a506;
+}
+
+.aboutus-content {
+  position: relative;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  z-index: -1;
+}
+
+.float-parent {
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 70px;
+  display: flex;
+}
+
+.float-child-1 {
+  width: 30%;
+  float: left;
+  padding: 10px;
+  flex: 1;
+}
+
+.float-child-2 {
+  width: 70%;
+  float: right;
+  padding: 10px;
+  flex: 1.5;
+}
+
+.aboutus-hero {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+.aboutus-hero img {
+  animation: float 4s ease-in-out infinite;
+  max-height: 380px;
+}
+
+@media (max-width: 947px) {
+  .aboutus-title {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .tagline {
+    font-size: 15px;
+    padding-top: 20px;
+  }
+
+  .aboutus-more a {
+    font-size: 10px;
+    padding: 5px 15px;
+    text-align: center;
+  }
+
+  .aboutus-content {
+    position: fixed;
+    top: 27%;
+    left: 25%;
+    padding-left: 100px;
+    padding-top: 106px;
+  }
+
+  .aboutus-more {
+    padding-top: 350px;
+  }
+}
