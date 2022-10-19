@@ -20,14 +20,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <title>BioTech</title>
+    <link rel="stylesheet" href="aboutusStyles.css" />
+
+    <title>BioTech|About Us</title>
     <link rel="shortcut icon" href="./assets/doctor.png" />
   </head>
 
   <body>
     <div class="wrapper">
       <div class="nav">
-        <div class="logo">BioTech</div>
+        <div class="logo"><a class="logotag" href="index.html">Biotech</a></div>
 
         <div class="menu-links">
           <ul class="menu">
@@ -46,31 +48,45 @@
         </div>
       </div>
 
-      <div class="content">
-        <div class="tagline">Tribute To Our Heroes</div>
+      <!-- <div class="principle-aboutus-container"> -->
+      <div class="aboutus-tagline">Something More About Our Heroes !</div>
 
-        <div class="title">DOCTORS</div>
-
-        <div class="more">
-          <a>Show your love</a>
+      <div class="float-parent">
+        <div class="float-child-1">
+          <div class="aboutus-hero">
+            <img src="./assets/doctor.png" alt="" />
+          </div>
         </div>
 
-        <div class="desc">
-          <p>
-            Saying <span>thank you</span> <br />
-            for everything
-          </p>
-          <p>
-            Thank you for the work you have put into helping others during this
-            insane time. Thank you so much for your bravery, sacrifices, and
-            unflagging compassion.
-          </p>
+        <div class="float-child-2">
+          <div class="aboutus-content">
+            <div class="aboutus-title">
+              Every day, selfless warriors are giving it their all in healthcare
+              settings while cutting themselves off from their families and
+              loved ones. The sacrifice that they are making for the safety and
+              welfare of humanity is priceless and deserves lifelong gratitude
+              on our end. Most importantly, we must reassess the value
+              healthcare workers hold in our lives and the kind of treatment
+              they get from us. Among the several lessons this coronavirus
+              pandemic has been teaching us, the biggest one is to find ways to
+              sufficiently invest in the better and more efficient medical
+              fraternity and give medical professionals the respect,
+              compensation, and infrastructure that they truly deserve once this
+              crisis is over. Moreover, the world needs to work towards
+              advancement in medical research and technology. Nothing will be a
+              greater tribute to the healthcare workers than this.<br />
+              That being said, we'd now like to appreciate the heroic efforts of
+              some courageous and inspiring doctors from across the globe who
+              lost their lives while saving the lives of COVID-19 patients.
+            </div>
+
+            <div class="aboutus-more">
+              <a>Show your love</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="hero">
-        <img src="./assets/doctor.png" alt="" />
-      </div>
+      <!-- </div> -->
 
       <div class="virus">
         <ul id="scene">
@@ -90,11 +106,6 @@
             <img src="./assets/COVID-5.png" alt="" />
           </li>
         </ul>
-      </div>
-
-      <div class="arrows">
-        <button class="prev"><i class="fa fa-chevron-left"></i></button>
-        <button class="next"><i class="fa fa-chevron-right"></i></button>
       </div>
     </div>
     <script src="./script.js"></script>

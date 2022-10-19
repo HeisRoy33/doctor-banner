@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body {
   width: 100%;
@@ -23,30 +24,29 @@ ul {
 
 .logo {
   font-size: 40px;
-  color: #FFC900
+  color: #ffc900;
 }
 
 .menu-links ul {
   display: inline-block;
   padding-right: 20px;
-  color: #FFC900;
+  color: #ffc900;
 }
 
 .menu-links ul a {
   display: inline-block;
   padding-right: 20px;
-  color: #FFC900;
+  color: #ffc900;
   text-decoration: none;
 }
 
 /* menu btn styling */
 .menu-btn {
-  color: #FFC900;
+  color: #ffc900;
   font-size: 23px;
   cursor: pointer;
   display: none;
 }
-
 
 .content {
   position: fixed;
@@ -65,8 +65,7 @@ ul {
   font-size: 200px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #F2A506;
-
+  color: #f2a506;
 }
 
 .tagline {
@@ -86,12 +85,12 @@ ul {
   background: #000;
   padding: 10px 30px;
   border-radius: 10px;
-  background-color: #F2A506;
+  background-color: #f2a506;
 }
 
 .desc {
   flex: 0 0 24%;
-  color: #FBFFE2
+  color: #fbffe2;
 }
 
 .desc p:nth-child(1) {
@@ -104,7 +103,7 @@ ul {
 }
 
 .desc span {
-  color: #00688B;
+  color: #00688b;
 }
 
 .hero {
@@ -189,15 +188,13 @@ ul {
   border-radius: 50%;
   outline: none;
   color: #000;
-  background: #F2A506;
+  background: #f2a506;
 }
 
 .arrows button:hover {
-  color: #F2A506;
+  color: #f2a506;
   background: #000;
 }
-
-
 
 .switch {
   width: 80px;
@@ -205,7 +202,6 @@ ul {
   border-radius: 20px;
   background-color: rgb(39, 38, 38);
   position: fixed;
-
 }
 
 .flicker {
@@ -217,13 +213,12 @@ ul {
   top: 5px;
   left: 5px;
   transition: 0.3s;
-  box-shadow:
-    inset 4px 4px 4px rgb(255,255,255),
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
     inset -4px -4px 4px rgb(195 193 198 / 90%);
 }
 
 .dark {
-  background-color: rgb(255,255,255);
+  background-color: rgb(255, 255, 255);
   transition: 0.3s;
 }
 
@@ -242,23 +237,22 @@ ul {
 }
 
 .dark > * {
- color: #000;
+  color: #000;
 }
 
 .dark p {
-  color:#000;
+  color: #000;
 }
-
 
 @media (max-width: 947px) {
   .menu-btn {
     display: block;
     z-index: 999;
-    padding-right: 100px
+    padding-right: 100px;
   }
 
   .menu-btn i.active:before {
-    content: "\f00d";
+    content: '\f00d';
   }
 
   .nav .menu {
@@ -276,11 +270,10 @@ ul {
     left: 0;
   }
 
-
   .nav .menu a {
     margin: 0;
     font-size: 10px;
-    padding-right: 10px
+    padding-right: 10px;
   }
 
   .logo {
@@ -294,7 +287,6 @@ ul {
     padding-top: 20px;
   }
 
-
   .switch {
     width: 40px;
     height: 40px;
@@ -305,7 +297,12 @@ ul {
 
   .tagline {
     font-size: 15px;
-    padding-top: 20px
+    padding-top: 20px;
+  }
+
+  .aboutus-tagline {
+    font-size: 15px;
+    padding-top: 20px;
   }
 
   .title {
@@ -334,9 +331,8 @@ ul {
   }
 
   .more {
-    padding-top: 350px
+    padding-top: 350px;
   }
-
 
   .arrows button {
     border: 1px solid #999;
@@ -368,13 +364,18 @@ ul {
   }
 
   .desc {
-    padding-top: 600px
+    padding-top: 600px;
   }
 
   .virus {
     position: relative;
     width: 0%;
-  height: 0vh;
+    height: 0vh;
+  }
+
+  .aboutus-title {
+    font-size: 30px;
+    font-weight: 200;
   }
 
   .virus .layer:nth-child(1) {
@@ -401,5 +402,37 @@ ul {
     top: 100px !important;
     left: -320px !important;
   }
+}
 
+.aboutus-title {
+  flex: 0 0 100%;
+  font-size: 35px;
+  font-weight: 200;
+  color: #f2a506;
+  text-align: justify;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.aboutus-more {
+  flex: 1;
+  text-align: center;
+}
+
+.aboutus-more a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  background: #000;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #f2a506;
+}
+
+.aboutus-tagline {
+  flex: 1;
+  font-size: 30px;
+  color: #999;
+  text-align: center;
 }
