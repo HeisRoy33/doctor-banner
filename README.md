@@ -28,7 +28,7 @@ This project was built using these technologies.
 
 ## Features
 
-- Link : https://itsroy69.github.io/doctor/
+- Link : https://heisroy33.github.io/doctor-banner/
 
 ### How to Contribute to this repository
 
