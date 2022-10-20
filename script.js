@@ -1,3 +1,5 @@
+document.body.classList.add(localStorage.getItem('theme') || "light")
+
 var scene = document.getElementById("scene");
 var parallax = new Parallax(scene);
 
@@ -155,6 +157,7 @@ const switchElement = document.querySelector(".switch");
 
 switchElement.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+  localStorage.getItem('theme') === "dark" ? localStorage.setItem("theme", "light") : localStorage.setItem("theme", "dark")
 });
 
 // toggle menu/navbar script
