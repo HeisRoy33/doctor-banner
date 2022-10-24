@@ -5,7 +5,7 @@ body {
   height: 100vh;
   font-family: 'Montserrat';
   font-size: 12px;
-  overflow: hidden;
+  overflow: auto;
   background: #000;
 }
 
@@ -49,7 +49,7 @@ ul {
 }
 
 .content {
-  position: fixed;
+  position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -57,7 +57,7 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   z-index: -1;
-  padding-top: 16px;
+  padding-top: 0px;
 }
 
 .title {
@@ -100,6 +100,7 @@ ul {
 
 .desc p:nth-child(2) {
   line-height: 2;
+  padding-bottom: 100px;
 }
 
 .desc span {
@@ -435,4 +436,88 @@ ul {
   font-size: 30px;
   color: #999;
   text-align: center;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(194, 182, 22);
+  height: 8vh;
+  width: 100vw;
+  /* padding-top: 40px; */
+  color: #fff;
+  margin-top: 0px;
+} 
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3{
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1rem;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  text-decoration: none;
+  color: rgb(3, 160, 250);
+  border: 1.1px solid rgb(250, 6, 250);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.socials a i{
+  font-size: 1.1rem;
+  width: 20px;
+  transition: color .4s ease;
+}
+
+.socials a:hover i{
+  color: aqua;
+}
+
+.footer-bottom{
+  background: #000;
+  width: 100vw;
+  /* padding: 20px; */
+  /* padding-bottom: 40px; */
+  text-align: center;
+}
+
+.footer-bottom p{
+  float: left;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom p a{
+ color:#44bae8;
+ font-size: 16px;
+ text-decoration: none;
+}
+.footer-bottom span{
+   text-transform: uppercase;
+   opacity: .4;
+   font-weight: 200;
 }
