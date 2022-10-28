@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+/* body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  overflow: visible;
+  background: #000;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  scroll-behavior: unset;
+} */
+
 body {
   width: 100%;
   height: 100vh;
@@ -7,6 +22,13 @@ body {
   font-size: 12px;
   overflow: auto;
   background: #000;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
 ul {
@@ -438,8 +460,7 @@ ul {
   text-align: center;
 }
 
-
-footer{
+footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -450,9 +471,9 @@ footer{
   /* padding-top: 40px; */
   color: #fff;
   margin-top: 0px;
-} 
+}
 
-.footer-content{
+.footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -460,14 +481,14 @@ footer{
   text-align: center;
 }
 
-.footer-content h3{
+.footer-content h3 {
   font-size: 1rem;
   font-weight: 500;
   text-transform: capitalize;
   line-height: 1rem;
 }
 
-.socials{
+.socials {
   list-style: none;
   display: flex;
   align-items: center;
@@ -475,11 +496,11 @@ footer{
   margin: 1rem 0 3rem 0;
 }
 
-.socials li{
+.socials li {
   margin: 0 10px;
 }
 
-.socials a{
+.socials a {
   text-decoration: none;
   color: rgb(3, 160, 250);
   border: 1.1px solid rgb(250, 6, 250);
@@ -487,17 +508,17 @@ footer{
   border-radius: 50%;
 }
 
-.socials a i{
+.socials a i {
   font-size: 1.1rem;
   width: 20px;
-  transition: color .4s ease;
+  transition: color 0.4s ease;
 }
 
-.socials a:hover i{
+.socials a:hover i {
   color: aqua;
 }
 
-.footer-bottom{
+.footer-bottom {
   background: #000;
   width: 100vw;
   /* padding: 20px; */
@@ -505,19 +526,19 @@ footer{
   text-align: center;
 }
 
-.footer-bottom p{
+.footer-bottom p {
   float: left;
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
 }
-.footer-bottom p a{
- color:#44bae8;
- font-size: 16px;
- text-decoration: none;
+.footer-bottom p a {
+  color: #44bae8;
+  font-size: 16px;
+  text-decoration: none;
 }
-.footer-bottom span{
-   text-transform: uppercase;
-   opacity: .4;
-   font-weight: 200;
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
 }

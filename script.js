@@ -1,4 +1,4 @@
-document.body.classList.add(localStorage.getItem('theme') || "light")
+document.body.classList.add(localStorage.getItem("theme") || "light");
 
 var scene = document.getElementById("scene");
 var parallax = new Parallax(scene);
@@ -104,6 +104,13 @@ TweenMax.from(".aboutus-title", 1, {
   ease: Expo.easeInOut,
 });
 
+TweenMax.from(".partner-title", 1, {
+  delay: 1,
+  opacity: 0,
+  y: 20,
+  ease: Expo.easeInOut,
+});
+
 TweenMax.from(".tagline", 1, {
   delay: 1.3,
   opacity: 0,
@@ -112,6 +119,13 @@ TweenMax.from(".tagline", 1, {
 });
 
 TweenMax.from(".aboutus-tagline", 1, {
+  delay: 1.3,
+  opacity: 0,
+  y: 20,
+  ease: Expo.easeInOut,
+});
+
+TweenMax.from(".partner-tagline", 1, {
   delay: 1.3,
   opacity: 0,
   y: 20,
@@ -157,7 +171,9 @@ const switchElement = document.querySelector(".switch");
 
 switchElement.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  localStorage.getItem('theme') === "dark" ? localStorage.setItem("theme", "light") : localStorage.setItem("theme", "dark")
+  localStorage.getItem("theme") === "dark"
+    ? localStorage.setItem("theme", "light")
+    : localStorage.setItem("theme", "dark");
 });
 
 // toggle menu/navbar script
