@@ -108,6 +108,7 @@ ul {
   padding: 10px 30px;
   border-radius: 10px;
   background-color: #f2a506;
+  cursor: pointer;
 }
 
 .desc {
@@ -217,6 +218,7 @@ ul {
 .arrows button:hover {
   color: #f2a506;
   background: #000;
+  cursor: pointer;
 }
 
 .switch {
@@ -225,6 +227,7 @@ ul {
   border-radius: 20px;
   background-color: rgb(39, 38, 38);
   position: fixed;
+  cursor: pointer;
 }
 
 .flicker {
@@ -316,6 +319,7 @@ ul {
     border-radius: 20px;
     background-color: rgb(39, 38, 38);
     position: fixed;
+    cursor: pointer;
   }
 
   .tagline {
@@ -451,6 +455,7 @@ ul {
   padding: 10px 30px;
   border-radius: 10px;
   background-color: #f2a506;
+  cursor: pointer;
 }
 
 .aboutus-tagline {
