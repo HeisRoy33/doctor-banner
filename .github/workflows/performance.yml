@@ -1,0 +1,19 @@
+- name: ESLint Code Review
+  # You may pin to the exact commit or the version.
+  # uses: yousufkalim/eslint-action@719c76bf1811f1505fcef5600b27521f10db2610
+  uses: yousufkalim/eslint-action@latest
+  with:
+    # The GitHub token used to create an authenticated client
+    github-token: # optional, default is ${{ github.token }}
+    # ESLint CLI flags
+    eslint-args: # optional, default is 
+    # User's eslintrc file
+    eslintrc: # optional
+    # Extensions to filter
+    extensions: # optional, default is js
+    # Enable or disable annotations
+    annotations: # optional, default is true
+    # Auto format and fix lint issues that are fixable by --fix before actual testing
+    auto-fix-before-test: # optional, default is true
+    # Path to eslint installation directory. Defaults to `node_modules/eslint/bin`
+    bin-path: # optional, default is node_modules/eslint/bin
