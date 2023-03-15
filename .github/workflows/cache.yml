@@ -1,0 +1,35 @@
+name: tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SPACES_KEY: ${{ secrets.SPACES_KEY }}
+      SPACES_SECRET: ${{ secrets.SPACES_SECRET }}
+    steps:
+      # Setup
+      - name: Check out source repository
+        uses: actions/checkout@v2
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            
+      - name: "Build project"
+        run: nix develop --command 'registry-build'
+
+      - name: "Run tests"
+        run: nix develop --command 'registry-test'
+
+      - name: "Verify CI code formats"
+        run: nix develop --command 'registry-check-format'
