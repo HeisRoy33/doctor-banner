@@ -56,6 +56,10 @@
     "color": "333333"
   },
   {
+    "name": "conflicts",
+    "color": "333333"
+  },
+  {
     "name": "🚧 status: blocked",
     "color": "999999"
   },
@@ -77,10 +81,6 @@
   },
   {
     "name": "🟩 priority: low",
-    "color": "cfda2c"
-  },
-  {
-    "name": "conflict",
     "color": "cfda2c"
   },
   {
