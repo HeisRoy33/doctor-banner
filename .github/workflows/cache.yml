@@ -1,35 +1,41 @@
-name: tests
+name: Build and Deploy
 
 on:
   push:
-    branches: [master]
-  pull_request:
+    branches:
+      - main
 
 jobs:
-  tests:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      SPACES_KEY: ${{ secrets.SPACES_KEY }}
-      SPACES_SECRET: ${{ secrets.SPACES_SECRET }}
+
     steps:
-      # Setup
-      - name: Check out source repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Cache NPM dependencies
+      - name: Check cache
+        uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            node_modules
+            # Add any other directories or files that you want to cache here
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build HTML/CSS
+        run: |
+          # Add any commands here that you need to run to build your HTML/CSS files.
+          # For example:
+          # npm run build
+
+      - name: Save cache
         uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-            
-      - name: "Build project"
-        run: nix develop --command 'registry-build'
-
-      - name: "Run tests"
-        run: nix develop --command 'registry-test'
-
-      - name: "Verify CI code formats"
-        run: nix develop --command 'registry-check-format'
+          path: |
+            node_modules
+            # Add any other directories or files that you want to cache here
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
