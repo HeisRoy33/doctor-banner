@@ -21,10 +21,7 @@ jobs:
             node_modules
             # Add any other directories or files that you want to cache here
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Install dependencies
-        run: npm install
-
+      
       - name: Build HTML/CSS
         run: |
           # Add any commands here that you need to run to build your HTML/CSS files.
