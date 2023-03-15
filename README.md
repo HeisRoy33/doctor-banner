@@ -1,7 +1,7 @@
 # Doctor
 
 This is a simple website implementing Html, Css and Javascript. I am just trying
-to implement UI/UX designs keeping Html, Css & Js as TechStack.
+to implement UI/UX designs kping Html, Css & Js as TechStack.
 
 <div align="center">
   <img alt="Demo" src="https://user-images.githubusercontent.com/78967360/168624673-669613ca-4239-4b0e-84a4-ed8c86edb3ce.png" />
