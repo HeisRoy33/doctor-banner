@@ -1,19 +1,25 @@
-- name: ESLint Code Review
-  # You may pin to the exact commit or the version.
-  # uses: yousufkalim/eslint-action@719c76bf1811f1505fcef5600b27521f10db2610
-  uses: yousufkalim/eslint-action@latest
-  with:
-    # The GitHub token used to create an authenticated client
-    github-token: # optional, default is ${{ github.token }}
-    # ESLint CLI flags
-    eslint-args: # optional, default is 
-    # User's eslintrc file
-    eslintrc: # optional
-    # Extensions to filter
-    extensions: # optional, default is js
-    # Enable or disable annotations
-    annotations: # optional, default is true
-    # Auto format and fix lint issues that are fixable by --fix before actual testing
-    auto-fix-before-test: # optional, default is true
-    # Path to eslint installation directory. Defaults to `node_modules/eslint/bin`
-    bin-path: # optional, default is node_modules/eslint/bin
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: ESLint Code Review
+        uses: yousufkalim/eslint-action@latest
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
+          eslint-args: '--ignore-path=.gitignore'
+          eslintrc: false # Set this to true if you want to use your own .eslintrc rules
+          extensions: 'js,jsx,ts,tsx'
+          auto-auto-fix-before-test: false # Set this to true if want to format and fix all the lint issue before testing
+          annotations: true
