@@ -1,26 +1,37 @@
-name: Build Performance
-
-on:
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  build-time:
-    name: Build Time Performance
-    timeout-minutes: 10
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-
-      - name: Installation
-        run: cd website && yarn install
-
-      - name: Build (cold cache)
-        run: cd website && yarn build
-        timeout-minutes: 5
-
-      - name: Build (warm cache)
-        run: cd website && yarn build
-        timeout-minutes: 1
+- name: Proof HTML
+  # You may pin to the exact commit or the version.
+  # uses: anishathalye/proof-html@7601fc9ab60d9f34f6df3f745a470e562537b6b6
+  uses: anishathalye/proof-html@v2.0.3
+  with:
+    # The directory to scan
+    directory: 
+    # Check whether external anchors exist
+    check_external_hash: # optional
+    # Validate HTML
+    check_html: # optional
+    # Check images and URLs in Open Graph metadata
+    check_opengraph: # optional
+    # Check whether favicons are valid
+    check_favicon: # optional
+    # Allow images with empty alt tags
+    ignore_empty_alt: # optional
+    # Allow anchors with missing href tags
+    allow_missing_href: # optional
+    # Require that links use HTTPS
+    enforce_https: # optional
+    # JSON-encoded map of domains to authorization tokens
+    tokens: # optional
+    # JSON-encoded map of URL rewrite rules
+    swap_urls: # optional
+    # Maximum number of concurrent requests
+    max_concurrency: # optional
+    # HTTP connection timeout
+    connect_timeout: # optional
+    # HTTP request timeout
+    timeout: # optional
+    # Newline-separated list of URLs to ignore
+    ignore_url: # optional
+    # Newline-separated list of URL regexes to ignore
+    ignore_url_re: # optional
+    # Number of times to retry checking links
+    retries: # optional
