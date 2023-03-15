@@ -24,6 +24,6 @@ jobs:
           remote-organization-name: "keploy"
           remote-repository-name: "keploy"
           path-to-signatures: "etc/cla-signatures/signatures.json"
-          path-to-document: "https://github.com/keploy/keploy/tree/main/.github/CLA.md"
+          path-to-document: "https://github.com/HeisRoy33/doctor-banner/tree/main/.github/CLA.md"
           branch: "cla-signatures"
           allowlist: "keploy-bot,renovate"
