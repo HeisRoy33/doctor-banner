@@ -13,5 +13,3 @@ jobs:
     - name: Run Action Linting
       uses: cfy9/action-linting@main
       
-      - name: GitHub Actions Linting
-        uses: nuwaycloud/action-linting@v0.0.3
