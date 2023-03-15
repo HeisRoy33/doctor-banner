@@ -1,37 +1,19 @@
-- name: Proof HTML
+- name: ESLint Code Review
   # You may pin to the exact commit or the version.
-  # uses: anishathalye/proof-html@7601fc9ab60d9f34f6df3f745a470e562537b6b6
-  uses: anishathalye/proof-html@v2.0.3
+  # uses: yousufkalim/eslint-action@719c76bf1811f1505fcef5600b27521f10db2610
+  uses: yousufkalim/eslint-action@latest
   with:
-    # The directory to scan
-    directory: 
-    # Check whether external anchors exist
-    check_external_hash: # optional
-    # Validate HTML
-    check_html: # optional
-    # Check images and URLs in Open Graph metadata
-    check_opengraph: # optional
-    # Check whether favicons are valid
-    check_favicon: # optional
-    # Allow images with empty alt tags
-    ignore_empty_alt: # optional
-    # Allow anchors with missing href tags
-    allow_missing_href: # optional
-    # Require that links use HTTPS
-    enforce_https: # optional
-    # JSON-encoded map of domains to authorization tokens
-    tokens: # optional
-    # JSON-encoded map of URL rewrite rules
-    swap_urls: # optional
-    # Maximum number of concurrent requests
-    max_concurrency: # optional
-    # HTTP connection timeout
-    connect_timeout: # optional
-    # HTTP request timeout
-    timeout: # optional
-    # Newline-separated list of URLs to ignore
-    ignore_url: # optional
-    # Newline-separated list of URL regexes to ignore
-    ignore_url_re: # optional
-    # Number of times to retry checking links
-    retries: # optional
+    # The GitHub token used to create an authenticated client
+    github-token: # optional, default is ${{ github.token }}
+    # ESLint CLI flags
+    eslint-args: # optional, default is 
+    # User's eslintrc file
+    eslintrc: # optional
+    # Extensions to filter
+    extensions: # optional, default is js
+    # Enable or disable annotations
+    annotations: # optional, default is true
+    # Auto format and fix lint issues that are fixable by --fix before actual testing
+    auto-fix-before-test: # optional, default is true
+    # Path to eslint installation directory. Defaults to `node_modules/eslint/bin`
+    bin-path: # optional, default is node_modules/eslint/bin
