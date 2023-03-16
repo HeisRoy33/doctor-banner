@@ -1,0 +1,186 @@
+<!-- About Us Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contactsStyles.css" />
+
+    <title>BioTech | Contacts</title>
+    <link rel="shortcut icon" href="./assets/doctor.png" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="logo">BioTech</div>
+        <div class="menu-links">
+          <ul class="menu">
+            <a href="aboutus.html">About Us</a>
+            <a href="">Product</a>
+            <a href="partners.html">Partners</a>
+            <a href="contacts.html">Contacts</a>
+          </ul>
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a class="switch">
+            <div class="flicker"></div>
+            <div class="sun"></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- <div class="principle-aboutus-container"> -->
+      <div class="aboutus-tagline">Contact Us</div>
+
+      <div class="float-parent">
+        <div class="float-child-1">
+          <!-- Facebook -->
+          <div class="social-icon">
+            <a
+              class="btn btn-primary"
+              style="background-color: #3b5998"
+              href="#!"
+              role="button"
+              >Connect With <i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+
+          <!-- Twitter -->
+          <div class="social-icon">
+            <a
+              class="btn btn-primary"
+              style="background-color: #55acee"
+              href="#!"
+              role="button"
+              >Connect With <i class="fab fa-twitter"></i
+            ></a>
+          </div>
+
+          <!-- Google -->
+          <div class="social-icon">
+            <a
+              class="btn btn-primary"
+              style="background-color: #dd4b39"
+              href="#!"
+              role="button"
+              >Connect With <i class="fab fa-google"></i
+            ></a>
+          </div>
+
+          <!-- Instagram -->
+          <div class="social-icon">
+            <a
+              class="btn btn-primary"
+              style="background-color: #ac2bac"
+              href="#!"
+              role="button"
+              >Connect With <i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <!-- </div> -->
+        </div>
+
+        <div class="float-child-2">
+          <div class="haveAMessage-heading">Have a message for us ?</div>
+
+          <form onSubmit="{handleSubmit}">
+            <div class="form-outline mb-4">
+              <input
+                type="name"
+                id="form2Example1"
+                class="form-control"
+                placeholder="What's your name ?"
+              />
+            </div>
+
+            <div class="form-outline mb-4">
+              <input
+                type="email"
+                id="form2Example2"
+                class="form-control"
+                placeholder="What's your email ?"
+              />
+            </div>
+
+            <!-- <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="form2Example2"
+                class="form-control"
+                rows="3"
+                placeholder="What's your message ?"
+              />
+            </div> -->
+
+            <div class="form-outline mb-4">
+              <textarea
+                placeholder="What's your message ?"
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="5"
+              ></textarea>
+            </div>
+
+            <div className="text-center">
+              <button
+                type="submit"
+                class="sendMessageButton btn btn-secondary btn-block btn-login"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <div class="virus">
+        <ul id="scene">
+          <li class="layer" data-depth="-.1">
+            <img src="./assets/COVID-1.png" alt="" />
+          </li>
+          <li class="layer" data-depth="-.3">
+            <img src="./assets/COVID-2.png" alt="" />
+          </li>
+          <li class="layer" data-depth="-1.5">
+            <img src="./assets/COVID-3.png" alt="" />
+          </li>
+          <li class="layer" data-depth=".1">
+            <img src="./assets/COVID-4.png" alt="" />
+          </li>
+          <li class="layer" data-depth=".3">
+            <img src="./assets/COVID-5.png" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
