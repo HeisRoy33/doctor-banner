@@ -8,10 +8,13 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: npm i && npm run build
-      - uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: .
-          branch: gh-pages
-          clean-exclude: pr-preview
+     - uses: rossjrw/pr-preview-action@v1
+    if: contains(['opened', 'reopened', 'synchronize'], github.event.action)
+    with:
+      source-dir: ./build/
+      action: deploy
+  - uses: rossjrw/pr-preview-action@v1
+    if: github.event.action == "closed" && !github.event.pull_request.merged
+    with:
+      source-dir: ./build/
+      action: remove
