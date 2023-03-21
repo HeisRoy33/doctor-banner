@@ -32,11 +32,7 @@ This project was built using these technologies.
 
 ### How to Contribute to this repository
 
-1. Fork the repository (Click the Fork button in the top right of this page,
-   click your Profile Image)
-2. Clone the forked repository to your local machine.
-
-```markdown
+1. Fork the r
 git clone https://github.com/your-username/doctor-banner.git
 ```
 
